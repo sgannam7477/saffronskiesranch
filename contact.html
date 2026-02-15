@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Saffron Skies Ranch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #8B4513;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background-color: #f5f5f5;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            color: #8B4513;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-header p {
+            color: #666;
+            font-size: 1.2rem;
+        }
+        
+        /* Contact Section */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .contact-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .contact-intro p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .contact-info {
+            background: #f9f9f9;
+            padding: 3rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+        
+        .contact-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .contact-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .contact-item h3 {
+            color: #8B4513;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-item a {
+            color: #8B4513;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: opacity 0.3s;
+        }
+        
+        .contact-item a:hover {
+            opacity: 0.7;
+        }
+        
+        .contact-item p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+        
+        .cta-box {
+            background: #8B4513;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 8px;
+        }
+        
+        .cta-box h2 {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .cta-box p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #8B4513;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+        
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .contact-info {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="page-header">
+        <h1>Contact Us</h1>
+        <p>Let's plan your perfect event</p>
+    </div>
+    
+    <div class="container">
+        <div class="contact-intro">
+            <p>
+                We'd love to hear from you! Whether you're interested in booking our venue, 
+                have questions about our facilities, or would like to schedule a tour, 
+                please don't hesitate to reach out.
+            </p>
+        </div>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>Phone</h3>
+                <a href="tel:2142087062">(214) 208-7062</a>
+                <p>Call us during business hours for immediate assistance</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>Email</h3>
+                <a href="mailto:bsireesha_35@yahoo.com">bsireesha_35@yahoo.com</a>
+                <p>Send us your inquiry and we'll respond within 24 hours</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>Hours</h3>
+                <p>Monday - Sunday: 9:00 AM - 6:00 PM</p>
+                <p>Tours available by appointment</p>
+            </div>
+        </div>
+        
+        <div class="cta-box">
+            <h2>Ready to Book Your Event?</h2>
+            <p>
+                Contact us today to check availability and learn more about our packages. 
+                We look forward to making your special day unforgettable at Saffron Skies Ranch!
+            </p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Saffron Skies Ranch - Van Alstyne, Texas</p>
+    </footer>
+</body>
+</html>
