@@ -151,15 +151,6 @@
             font-size: 1rem;
         }
 
-        .feature-card.highlight {
-            background-color: #8B4513;
-        }
-
-        .feature-card.highlight .feature-number,
-        .feature-card.highlight .feature-label {
-            color: #fff;
-        }
-
         /* Room / Area Sections */
         .room-section {
             padding: 4rem 2rem;
@@ -182,13 +173,6 @@
             border-bottom: 2px solid #8B4513;
             display: inline-block;
             padding-bottom: 0.4rem;
-        }
-
-        .room-description {
-            color: #555;
-            max-width: 700px;
-            margin-bottom: 2rem;
-            font-style: italic;
         }
 
         .photo-grid {
@@ -273,10 +257,9 @@
             <a href="#kitchen">Kitchen</a>
             <a href="#dining-room">Dining Room</a>
             <a href="#master-bedroom">Master Bedroom</a>
-            <a href="#upstairs">Upstairs</a>
-            <a href="#upstairs-bedrooms">Upstairs Bedrooms</a>
             <a href="#master-bath">Master Bath</a>
             <a href="#powder-bath">Powder Bath</a>
+            <a href="#upstairs-bedrooms">Upstairs Bedrooms</a>
             <a href="#upstairs-bathrooms">Upstairs Bathrooms</a>
             <a href="#game-room">Game Room</a>
             <a href="#backyard">Backyard</a>
@@ -289,7 +272,6 @@
     <section class="room-section" id="exterior-front">
         <div class="room-section-inner">
             <h2>Exterior Front</h2>
-            <p class="room-description">[Add a short description of the exterior front here]</p>
             <div class="photo-grid">
                 <img src="images/2_SFR60635.jpeg" alt="Exterior Front view 1">
                 <img src="images/13_SFR60658.jpeg" alt="Exterior Front view 2">
@@ -331,7 +313,11 @@
                 <div class="feature-number">1</div>
                 <div class="feature-label">Sofa Bed</div>
             </div>
-            <div class="feature-card highlight">
+            <div class="feature-card">
+                <div class="feature-number">3</div>
+                <div class="feature-label">Additional Queen-Size Beddings</div>
+            </div>
+            <div class="feature-card">
                 <div class="feature-number">20</div>
                 <div class="feature-label">Max Occupancy</div>
             </div>
@@ -343,13 +329,11 @@
     <!-- Each section below is a repeatable template.   -->
     <!-- Step 2: replace the .photo-placeholder divs    -->
     <!-- with <img src="images/FILENAME.jpeg" alt="..."> -->
-    <!-- and fill in the room-description text.         -->
     <!-- ============================================= -->
 
     <section class="room-section" id="hall">
         <div class="room-section-inner">
             <h2>Hall</h2>
-            <p class="room-description">[Add a short description of the hall here]</p>
             <div class="photo-grid">
                 <img src="images/IMG_3205.jpeg" alt="Hall view 1">
                 <img src="images/IMG_3198.jpeg" alt="Hall view 2">
@@ -366,7 +350,6 @@
     <section class="room-section" id="kitchen">
         <div class="room-section-inner">
             <h2>Kitchen</h2>
-            <p class="room-description">[Add a short description of the kitchen here]</p>
             <div class="photo-grid">
                 <img src="images/IMG_3208.jpeg" alt="Kitchen view 1">
                 <img src="images/IMG_3207.jpeg" alt="Kitchen view 2">
@@ -383,7 +366,6 @@
     <section class="room-section" id="dining-room">
         <div class="room-section-inner">
             <h2>Dining Room</h2>
-            <p class="room-description">[Add a short description of the dining room here]</p>
             <div class="photo-grid">
                 <img src="images/IMG_3218.jpeg" alt="Dining Room view 1">
                 <img src="images/IMG_3219.jpeg" alt="Dining Room view 2">
@@ -394,7 +376,6 @@
     <section class="room-section" id="master-bedroom">
         <div class="room-section-inner">
             <h2>Master Bedroom</h2>
-            <p class="room-description">[Add a short description of the master bedroom here]</p>
             <div class="photo-grid">
                 <img src="images/IMG_3220.jpeg" alt="Master Bedroom view 1">
                 <img src="images/IMG_3222.jpeg" alt="Master Bedroom view 2">
@@ -403,12 +384,24 @@
         </div>
     </section>
 
-    <section class="room-section" id="upstairs">
+    <section class="room-section" id="master-bath">
         <div class="room-section-inner">
-            <h2>Upstairs</h2>
-            <p class="room-description">[Add a short description of the upstairs landing/area here]</p>
+            <h2>Master Bath</h2>
             <div class="photo-grid">
-                <img src="images/144_SFR60956.jpeg" alt="Upstairs view 1">
+                <img src="images/IMG_3225.jpeg" alt="Master Bath view 1">
+                <img src="images/IMG_3227.jpeg" alt="Master Bath view 2">
+                <img src="images/IMG_3228.jpeg" alt="Master Bath view 3">
+                <img src="images/IMG_3027.jpeg" alt="Master Bath view 4">
+            </div>
+        </div>
+    </section>
+
+    <section class="room-section" id="powder-bath">
+        <div class="room-section-inner">
+            <h2>Powder Bath</h2>
+            <div class="photo-grid">
+                <img src="images/IMG_3229.jpeg" alt="Powder Bath view 1">
+                <img src="images/IMG_3230.jpeg" alt="Powder Bath view 2">
             </div>
         </div>
     </section>
@@ -416,7 +409,6 @@
     <section class="room-section" id="upstairs-bedrooms">
         <div class="room-section-inner">
             <h2>Upstairs Bedrooms</h2>
-            <p class="room-description">[Add a short description of the upstairs bedrooms here]</p>
             <div class="photo-grid">
                 <img src="images/IMG_7702.jpeg" alt="Upstairs Bedroom view 1">
                 <img src="images/IMG_7706.jpeg" alt="Upstairs Bedroom view 2">
@@ -427,38 +419,15 @@
         </div>
     </section>
 
-    <section class="room-section" id="master-bath">
-        <div class="room-section-inner">
-            <h2>Master Bath</h2>
-            <p class="room-description">[Add a short description of the master bath here]</p>
-            <div class="photo-grid">
-                <img src="images/IMG_3225.jpeg" alt="Master Bath view 1">
-                <img src="images/IMG_3227.jpeg" alt="Master Bath view 2">
-                <img src="images/IMG_3228.jpeg" alt="Master Bath view 3">
-            </div>
-        </div>
-    </section>
-
-    <section class="room-section" id="powder-bath">
-        <div class="room-section-inner">
-            <h2>Powder Bath</h2>
-            <p class="room-description">[Add a short description of the powder bath here]</p>
-            <div class="photo-grid">
-                <img src="images/IMG_3229.jpeg" alt="Powder Bath view 1">
-                <img src="images/IMG_3230.jpeg" alt="Powder Bath view 2">
-                <img src="images/IMG_3231.jpeg" alt="Powder Bath view 3">
-            </div>
-        </div>
-    </section>
-
     <section class="room-section" id="upstairs-bathrooms">
         <div class="room-section-inner">
             <h2>Upstairs Bathrooms</h2>
-            <p class="room-description">[Add a short description of the upstairs bathrooms here]</p>
             <div class="photo-grid">
                 <img src="images/IMG_7739.jpeg" alt="Upstairs Bathroom view 1">
                 <img src="images/IMG_3044.jpeg" alt="Upstairs Bathroom view 2">
                 <img src="images/IMG_3046.jpeg" alt="Upstairs Bathroom view 3">
+                <img src="images/IMG_3043.jpeg" alt="Upstairs Bathroom view 4">
+                <img src="images/IMG_3048.jpeg" alt="Upstairs Bathroom view 5">
             </div>
         </div>
     </section>
@@ -466,7 +435,6 @@
     <section class="room-section" id="game-room">
         <div class="room-section-inner">
             <h2>Game Room</h2>
-            <p class="room-description">[Add a short description of the game room here]</p>
             <div class="photo-grid">
                 <img src="images/168_SFR61000.jpeg" alt="Game Room view 1">
                 <img src="images/IMG_7709.jpeg" alt="Game Room view 2">
@@ -477,7 +445,6 @@
     <section class="room-section" id="backyard">
         <div class="room-section-inner">
             <h2>Backyard</h2>
-            <p class="room-description">[Add a short description of the backyard here]</p>
             <div class="photo-grid">
                 <img src="images/75_SFR60779.jpeg" alt="Backyard view 1">
                 <img src="images/77_SFR60785.jpeg" alt="Backyard view 2">
