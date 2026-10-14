@@ -1,464 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Property Details - Saffron Skies Ranch</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        /* Navigation */
-        nav {
-            background-color: #8B4513;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: opacity 0.3s;
-        }
-
-        nav a:hover {
-            opacity: 0.8;
-        }
-
-        /* Page Header */
-        .page-header {
-            background-color: #f5f5f5;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .page-header h1 {
-            color: #8B4513;
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .page-header p {
-            color: #666;
-            font-size: 1.2rem;
-        }
-
-        /* Quick Jump Menu */
-        .quick-nav {
-            background-color: #fff;
-            border-bottom: 1px solid #eee;
-            padding: 1.25rem 2rem;
-            position: sticky;
-            top: 60px;
-            z-index: 90;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-        }
-
-        .quick-nav-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.6rem;
-        }
-
-        .quick-nav a {
-            color: #8B4513;
-            text-decoration: none;
-            border: 1px solid #8B4513;
-            border-radius: 999px;
-            padding: 0.4rem 1rem;
-            font-size: 0.9rem;
-            transition: background-color 0.3s, color 0.3s;
-            white-space: nowrap;
-        }
-
-        .quick-nav a:hover {
-            background-color: #8B4513;
-            color: #fff;
-        }
-
-        /* Overview / Features Section */
-        .overview {
-            max-width: 1100px;
-            margin: 4rem auto;
-            padding: 0 2rem;
-            scroll-margin-top: 130px;
-        }
-
-        .overview h2 {
-            color: #8B4513;
-            font-size: 2.2rem;
-            text-align: center;
-            margin-bottom: 0.5rem;
-        }
-
-        .overview .section-subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 2.5rem;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .feature-card {
-            background-color: #f9f6f2;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            padding: 1.75rem 1rem;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-        }
-
-        .feature-card .feature-number {
-            font-size: 2.25rem;
-            color: #8B4513;
-            font-weight: bold;
-            margin-bottom: 0.25rem;
-        }
-
-        .feature-card .feature-label {
-            color: #555;
-            font-size: 1rem;
-        }
-
-        /* Room / Area Sections */
-        .room-section {
-            padding: 4rem 2rem;
-            scroll-margin-top: 130px;
-        }
-
-        .room-section:nth-of-type(even) {
-            background-color: #f9f6f2;
-        }
-
-        .room-section-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .room-section h2 {
-            color: #8B4513;
-            font-size: 2rem;
-            margin-bottom: 0.75rem;
-            border-bottom: 2px solid #8B4513;
-            display: inline-block;
-            padding-bottom: 0.4rem;
-        }
-
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .photo-grid img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-            display: block;
-        }
-
-        .photo-placeholder {
-            height: 280px;
-            border: 2px dashed #c9a582;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #a8825f;
-            font-size: 1rem;
-            text-align: center;
-            padding: 1rem;
-            background-color: #fdfbf9;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #8B4513;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .page-header h1 {
-                font-size: 2rem;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .quick-nav {
-                top: 0;
-                position: static;
-            }
-
-            .room-section, .overview {
-                scroll-margin-top: 20px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Ranch — Saffron Skies Ranch</title>
+  <meta name="description" content="Tour Saffron Skies Ranch room by room: hall, kitchen, dining, bedrooms, game room and backyard. Sleeps 20 in Van Alstyne, Texas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">SS</span>
+        <span class="brand-name">Saffron Skies Ranch</span>
+      </a>
+      <nav class="main-nav">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="details.html">Details</a></li>
-            <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="details.html">The Ranch</a></li>
+          <li><a href="#overview">Amenities</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-    </nav>
-
-    <div class="page-header">
-        <h1>Property Details</h1>
-        <p>Everything Saffron Skies Ranch has to offer, room by room</p>
+      </nav>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
+  </header>
+  <div class="nav-overlay"></div>
 
-    <!-- Quick jump menu to each section below -->
-    <div class="quick-nav">
-        <div class="quick-nav-inner">
-            <a href="#exterior-front">Exterior Front</a>
-            <a href="#overview">Overview</a>
-            <a href="#hall">Hall</a>
-            <a href="#kitchen">Kitchen</a>
-            <a href="#dining-room">Dining Room</a>
-            <a href="#master-bedroom">Master Bedroom</a>
-            <a href="#master-bath">Master Bath</a>
-            <a href="#powder-bath">Powder Bath</a>
-            <a href="#upstairs-bedrooms">Upstairs Bedrooms</a>
-            <a href="#upstairs-bathrooms">Upstairs Bathrooms</a>
-            <a href="#game-room">Game Room</a>
-            <a href="#backyard">Backyard</a>
-        </div>
+  <section class="page-hero">
+    <p class="hero-eyebrow">Property Tour</p>
+    <h1>The Ranch, Room by Room</h1>
+  </section>
+
+  <div class="pill-nav">
+    <div class="container pill-nav-inner">
+      <a href="#exterior-front">Exterior Front</a>
+      <a href="#overview">Overview</a>
+      <a href="#hall">Hall</a>
+      <a href="#kitchen">Kitchen</a>
+      <a href="#dining-room">Dining Room</a>
+      <a href="#master-bedroom">Master Bedroom</a>
+      <a href="#master-bath">Master Bath</a>
+      <a href="#powder-bath">Powder Bath</a>
+      <a href="#upstairs-bedrooms">Upstairs Bedrooms</a>
+      <a href="#upstairs-bathrooms">Upstairs Baths</a>
+      <a href="#game-room">Game Room</a>
+      <a href="#backyard">Backyard</a>
     </div>
+  </div>
 
-    <!-- ============================================= -->
-    <!-- EXTERIOR FRONT                                 -->
-    <!-- ============================================= -->
-    <section class="room-section" id="exterior-front">
-        <div class="room-section-inner">
-            <h2>Exterior Front</h2>
-            <div class="photo-grid">
-                <img src="images/2_SFR60635.jpeg" alt="Exterior Front view 1">
-                <img src="images/13_SFR60658.jpeg" alt="Exterior Front view 2">
-                <img src="images/17_SFR60667.jpeg" alt="Exterior Front view 3">
-                <img src="images/26_SFR60685.jpeg" alt="Exterior Front view 4">
-            </div>
+  <section class="room-section" id="exterior-front">
+    <div class="container">
+      <h2>Exterior Front</h2>
+      <div class="gallery-grid">
+        <img src="images/2_SFR60635.jpeg" alt="Exterior Front view 1">
+        <img src="images/13_SFR60658.jpeg" alt="Exterior Front view 2">
+        <img src="images/17_SFR60667.jpeg" alt="Exterior Front view 3">
+        <img src="images/26_SFR60685.jpeg" alt="Exterior Front view 4">
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="overview">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-eyebrow">Overview</p>
+        <h2>The Space at a Glance</h2>
+        <p>Room to gather, room to rest — sleeping arrangements for up to twenty guests.</p>
+      </div>
+      <div class="stats reveal" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))">
+        <div><div class="stat-num">4</div><div class="stat-label">Bedrooms</div></div>
+        <div><div class="stat-num">3.5</div><div class="stat-label">Bathrooms</div></div>
+        <div><div class="stat-num">1</div><div class="stat-label">King Bed</div></div>
+        <div><div class="stat-num">4</div><div class="stat-label">Queen Beds</div></div>
+        <div><div class="stat-num">1</div><div class="stat-label">Bunk Bed</div></div>
+        <div><div class="stat-num">1</div><div class="stat-label">Sofa Bed</div></div>
+        <div><div class="stat-num">3</div><div class="stat-label">Extra Queen Bedding</div></div>
+        <div><div class="stat-num">20</div><div class="stat-label">Max Occupancy</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="room-section" id="hall">
+    <div class="container">
+      <h2>Hall</h2>
+      <div class="gallery-grid">
+        <img src="images/IMG_3205.jpeg" alt="Hall view 1">
+        <img src="images/IMG_3198.jpeg" alt="Hall view 2">
+        <img src="images/IMG_3193.jpeg" alt="Hall view 3">
+        <img src="images/IMG_3197.jpeg" alt="Hall view 4">
+        <img src="images/IMG_3201.jpeg" alt="Hall view 5">
+        <img src="images/IMG_3202.jpeg" alt="Hall view 6">
+        <img src="images/IMG_3203.jpeg" alt="Hall view 7">
+        <img src="images/IMG_3204.jpeg" alt="Hall view 8">
+      </div>
+    </div>
+  </section>
+
+  <section class="room-section" id="kitchen">
+    <div class="container">
+      <h2>Kitchen</h2>
+      <div class="gallery-grid">
+        <img src="images/IMG_3208.jpeg" alt="Kitchen view 1">
+        <img src="images/IMG_3207.jpeg" alt="Kitchen view 2">
+        <img src="images/IMG_3209.jpeg" alt="Kitchen view 3">
+        <img src="images/IMG_3210.jpeg" alt="Kitchen view 4">
+        <img src="images/IMG_3211.jpeg" alt="Kitchen view 5">
+        <img src="images/IMG_3213.jpeg" alt="Kitchen view 6">
+        <img src="images/IMG_3215.jpeg" alt="Kitchen view 7">
+        <img src="images/IMG_3216.jpeg" alt="Kitchen view 8">
+      </div>
+    </div>
+  </section>
+
+  <section class="room-section" id="dining-room">
+    <div class="container">
+      <h2>Dining Room</h2>
+      <div class="gallery-grid">
+        <img src="images/IMG_3218.jpeg" alt="Dining Room view 1">
+        <img src="images/IMG_3219.jpeg" alt="Dining Room view 2">
+      </div>
+    </div>
+  </section>
+
+  <section class="room-section" id="master-bedroom">
+    <div class="container">
+      <h2>Master Bedroom</h2>
+      <div class="gallery-grid">
+        <img src="images/IMG_3220.jpeg" alt="Master Bedroom view 1">
+        <img src="images/IMG_3222.jpeg" alt="Master Bedroom view 2">
+        <img src="images/IMG_3224.jpeg" alt="Master Bedroom view 3">
+      </div>
+    </div>
+  </section>
+
+  <section class="room-section" id="master-bath">
+    <div class="container">
+      <h2>Master Bath</h2>
+      <div class="gallery-grid">
+        <img src="images/IMG_3225.jpeg" alt="Master Bath view 1">
+        <img src="images/IMG_3227.jpeg" alt="Master Bath view 2">
+        <img src="images/IMG_3228.jpeg" alt="Master Bath view 3">
+        <img src="images/IMG_3027.jpeg" alt="Master Bath view 4">
+      </div>
+    </div>
+  </section>
+
+  <section class="room-section" id="powder-bath">
+    <div class="container">
+      <h2>Powder Bath</h2>
+      <div class="gallery-grid">
+        <img src="images/IMG_3229.jpeg" alt="Powder Bath view 1">
+        <img src="images/IMG_3230.jpeg" alt="Powder Bath view 2">
+      </div>
+    </div>
+  </section>
+
+  <section class="room-section" id="upstairs-bedrooms">
+    <div class="container">
+      <h2>Upstairs Bedrooms</h2>
+      <div class="gallery-grid">
+        <img src="images/IMG_7702.jpeg" alt="Upstairs Bedroom view 1">
+        <img src="images/IMG_7706.jpeg" alt="Upstairs Bedroom view 2">
+        <img src="images/IMG_7717.jpeg" alt="Upstairs Bedroom view 3">
+        <img src="images/IMG_7719.jpeg" alt="Upstairs Bedroom view 4">
+        <img src="images/IMG_7729.jpeg" alt="Upstairs Bedroom view 5">
+      </div>
+    </div>
+  </section>
+
+  <section class="room-section" id="upstairs-bathrooms">
+    <div class="container">
+      <h2>Upstairs Bathrooms</h2>
+      <div class="gallery-grid">
+        <img src="images/IMG_7739.jpeg" alt="Upstairs Bathroom view 1">
+        <img src="images/IMG_3044.jpeg" alt="Upstairs Bathroom view 2">
+        <img src="images/IMG_3046.jpeg" alt="Upstairs Bathroom view 3">
+        <img src="images/IMG_3043.jpeg" alt="Upstairs Bathroom view 4">
+        <img src="images/IMG_3048.jpeg" alt="Upstairs Bathroom view 5">
+      </div>
+    </div>
+  </section>
+
+  <section class="room-section" id="game-room">
+    <div class="container">
+      <h2>Game Room</h2>
+      <div class="gallery-grid">
+        <img src="images/168_SFR61000.jpeg" alt="Game Room view 1">
+        <img src="images/IMG_7709.jpeg" alt="Game Room view 2">
+      </div>
+    </div>
+  </section>
+
+  <section class="room-section" id="backyard" style="padding-bottom:4rem">
+    <div class="container">
+      <h2>Backyard</h2>
+      <div class="gallery-grid">
+        <img src="images/75_SFR60779.jpeg" alt="Backyard view 1">
+        <img src="images/77_SFR60785.jpeg" alt="Backyard view 2">
+        <img src="images/73_SFR60776.jpeg" alt="Backyard view 3">
+        <img src="images/49_SFR60720.jpeg" alt="Backyard view 4">
+        <img src="images/64_SFR60750.jpeg" alt="Backyard view 5">
+        <img src="images/58_SFR60738.jpeg" alt="Backyard view 6">
+        <img src="images/IMG_1250.jpg" alt="Backyard view 7">
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <h2>Love What You See?</h2>
+    <p>Schedule a tour or check availability for your date — we'd love to host you at the ranch.</p>
+    <a class="btn btn-primary" href="contact.html">Contact Us</a>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-name">Saffron Skies Ranch</div>
+          <p>A private event house venue in Van Alstyne, Texas — where every celebration finds its sky.</p>
         </div>
-    </section>
-
-    <!-- ============================================= -->
-    <!-- OVERVIEW / FEATURES (no photos)                -->
-    <!-- ============================================= -->
-    <section class="overview" id="overview">
-        <h2>Property Overview</h2>
-        <p class="section-subtitle">A look at the space and sleeping arrangements</p>
-
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-number">4</div>
-                <div class="feature-label">Bedrooms</div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-number">3.5</div>
-                <div class="feature-label">Bathrooms</div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-number">1</div>
-                <div class="feature-label">King Bed</div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-number">4</div>
-                <div class="feature-label">Queen Beds</div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-number">1</div>
-                <div class="feature-label">Bunk Bed</div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-number">1</div>
-                <div class="feature-label">Sofa Bed</div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-number">3</div>
-                <div class="feature-label">Additional Queen-Size Beddings</div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-number">20</div>
-                <div class="feature-label">Max Occupancy</div>
-            </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="details.html">The Ranch</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
         </div>
-    </section>
-
-    <!-- ============================================= -->
-    <!-- ROOM / AREA SECTIONS                           -->
-    <!-- Each section below is a repeatable template.   -->
-    <!-- Step 2: replace the .photo-placeholder divs    -->
-    <!-- with <img src="images/FILENAME.jpeg" alt="..."> -->
-    <!-- ============================================= -->
-
-    <section class="room-section" id="hall">
-        <div class="room-section-inner">
-            <h2>Hall</h2>
-            <div class="photo-grid">
-                <img src="images/IMG_3205.jpeg" alt="Hall view 1">
-                <img src="images/IMG_3198.jpeg" alt="Hall view 2">
-                <img src="images/IMG_3193.jpeg" alt="Hall view 3">
-                <img src="images/IMG_3197.jpeg" alt="Hall view 4">
-                <img src="images/IMG_3201.jpeg" alt="Hall view 5">
-                <img src="images/IMG_3202.jpeg" alt="Hall view 6">
-                <img src="images/IMG_3203.jpeg" alt="Hall view 7">
-                <img src="images/IMG_3204.jpeg" alt="Hall view 8">
-            </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="tel:2142087062">(214) 208-7062</a></li>
+            <li><a href="mailto:bgbnbllc@gmail.com">bgbnbllc@gmail.com</a></li>
+            <li>Mon–Sun · 9 AM – 6 PM</li>
+          </ul>
         </div>
-    </section>
+      </div>
+      <div class="footer-bottom">© 2026 Saffron Skies Ranch · Van Alstyne, Texas</div>
+    </div>
+  </footer>
 
-    <section class="room-section" id="kitchen">
-        <div class="room-section-inner">
-            <h2>Kitchen</h2>
-            <div class="photo-grid">
-                <img src="images/IMG_3208.jpeg" alt="Kitchen view 1">
-                <img src="images/IMG_3207.jpeg" alt="Kitchen view 2">
-                <img src="images/IMG_3209.jpeg" alt="Kitchen view 3">
-                <img src="images/IMG_3210.jpeg" alt="Kitchen view 4">
-                <img src="images/IMG_3211.jpeg" alt="Kitchen view 5">
-                <img src="images/IMG_3213.jpeg" alt="Kitchen view 6">
-                <img src="images/IMG_3215.jpeg" alt="Kitchen view 7">
-                <img src="images/IMG_3216.jpeg" alt="Kitchen view 8">
-            </div>
-        </div>
-    </section>
+  <div class="mobile-bar">
+    <a class="bar-call" href="tel:2142087062">Call Us</a>
+    <a class="bar-book" href="contact.html">Contact</a>
+  </div>
+  <button class="to-top" aria-label="Back to top">&#8593;</button>
 
-    <section class="room-section" id="dining-room">
-        <div class="room-section-inner">
-            <h2>Dining Room</h2>
-            <div class="photo-grid">
-                <img src="images/IMG_3218.jpeg" alt="Dining Room view 1">
-                <img src="images/IMG_3219.jpeg" alt="Dining Room view 2">
-            </div>
-        </div>
-    </section>
-
-    <section class="room-section" id="master-bedroom">
-        <div class="room-section-inner">
-            <h2>Master Bedroom</h2>
-            <div class="photo-grid">
-                <img src="images/IMG_3220.jpeg" alt="Master Bedroom view 1">
-                <img src="images/IMG_3222.jpeg" alt="Master Bedroom view 2">
-                <img src="images/IMG_3224.jpeg" alt="Master Bedroom view 3">
-            </div>
-        </div>
-    </section>
-
-    <section class="room-section" id="master-bath">
-        <div class="room-section-inner">
-            <h2>Master Bath</h2>
-            <div class="photo-grid">
-                <img src="images/IMG_3225.jpeg" alt="Master Bath view 1">
-                <img src="images/IMG_3227.jpeg" alt="Master Bath view 2">
-                <img src="images/IMG_3228.jpeg" alt="Master Bath view 3">
-                <img src="images/IMG_3027.jpeg" alt="Master Bath view 4">
-            </div>
-        </div>
-    </section>
-
-    <section class="room-section" id="powder-bath">
-        <div class="room-section-inner">
-            <h2>Powder Bath</h2>
-            <div class="photo-grid">
-                <img src="images/IMG_3229.jpeg" alt="Powder Bath view 1">
-                <img src="images/IMG_3230.jpeg" alt="Powder Bath view 2">
-            </div>
-        </div>
-    </section>
-
-    <section class="room-section" id="upstairs-bedrooms">
-        <div class="room-section-inner">
-            <h2>Upstairs Bedrooms</h2>
-            <div class="photo-grid">
-                <img src="images/IMG_7702.jpeg" alt="Upstairs Bedroom view 1">
-                <img src="images/IMG_7706.jpeg" alt="Upstairs Bedroom view 2">
-                <img src="images/IMG_7717.jpeg" alt="Upstairs Bedroom view 3">
-                <img src="images/IMG_7719.jpeg" alt="Upstairs Bedroom view 4">
-                <img src="images/IMG_7729.jpeg" alt="Upstairs Bedroom view 5">
-            </div>
-        </div>
-    </section>
-
-    <section class="room-section" id="upstairs-bathrooms">
-        <div class="room-section-inner">
-            <h2>Upstairs Bathrooms</h2>
-            <div class="photo-grid">
-                <img src="images/IMG_7739.jpeg" alt="Upstairs Bathroom view 1">
-                <img src="images/IMG_3044.jpeg" alt="Upstairs Bathroom view 2">
-                <img src="images/IMG_3046.jpeg" alt="Upstairs Bathroom view 3">
-                <img src="images/IMG_3043.jpeg" alt="Upstairs Bathroom view 4">
-                <img src="images/IMG_3048.jpeg" alt="Upstairs Bathroom view 5">
-            </div>
-        </div>
-    </section>
-
-    <section class="room-section" id="game-room">
-        <div class="room-section-inner">
-            <h2>Game Room</h2>
-            <div class="photo-grid">
-                <img src="images/168_SFR61000.jpeg" alt="Game Room view 1">
-                <img src="images/IMG_7709.jpeg" alt="Game Room view 2">
-            </div>
-        </div>
-    </section>
-
-    <section class="room-section" id="backyard">
-        <div class="room-section-inner">
-            <h2>Backyard</h2>
-            <div class="photo-grid">
-                <img src="images/75_SFR60779.jpeg" alt="Backyard view 1">
-                <img src="images/77_SFR60785.jpeg" alt="Backyard view 2">
-                <img src="images/73_SFR60776.jpeg" alt="Backyard view 3">
-                <img src="images/49_SFR60720.jpeg" alt="Backyard view 4">
-                <img src="images/64_SFR60750.jpeg" alt="Backyard view 5">
-                <img src="images/58_SFR60738.jpeg" alt="Backyard view 6">
-                <img src="images/IMG_1250.jpg" alt="Backyard view 7">
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>Saffron Skies Ranch - Van Alstyne, Texas</p>
-    </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>

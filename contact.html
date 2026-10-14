@@ -1,223 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Saffron Skies Ranch</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        /* Navigation */
-        nav {
-            background-color: #8B4513;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: opacity 0.3s;
-        }
-        
-        nav a:hover {
-            opacity: 0.8;
-        }
-        
-        /* Page Header */
-        .page-header {
-            background-color: #f5f5f5;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-        
-        .page-header h1 {
-            color: #8B4513;
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .page-header p {
-            color: #666;
-            font-size: 1.2rem;
-        }
-        
-        /* Contact Section */
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-        
-        .contact-intro {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .contact-intro p {
-            font-size: 1.2rem;
-            color: #555;
-            line-height: 1.8;
-        }
-        
-        .contact-info {
-            background: #f9f9f9;
-            padding: 3rem;
-            border-radius: 8px;
-            margin-bottom: 3rem;
-        }
-        
-        .contact-item {
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .contact-item:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-        
-        .contact-item h3 {
-            color: #8B4513;
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .contact-item a {
-            color: #8B4513;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: opacity 0.3s;
-        }
-        
-        .contact-item a:hover {
-            opacity: 0.7;
-        }
-        
-        .contact-item p {
-            font-size: 1.1rem;
-            color: #555;
-        }
-        
-        .cta-box {
-            background: #8B4513;
-            color: white;
-            padding: 2rem;
-            text-align: center;
-            border-radius: 8px;
-        }
-        
-        .cta-box h2 {
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
-        }
-        
-        .cta-box p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #8B4513;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-        
-        @media (max-width: 768px) {
-            .page-header h1 {
-                font-size: 2rem;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .contact-info {
-                padding: 2rem 1.5rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Saffron Skies Ranch</title>
+  <meta name="description" content="Contact Saffron Skies Ranch in Van Alstyne, Texas. Call (214) 208-7062 or email bgbnbllc@gmail.com to book your event or schedule a tour.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">SS</span>
+        <span class="brand-name">Saffron Skies Ranch</span>
+      </a>
+      <nav class="main-nav">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="details.html">Details</a></li>
-            <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="details.html">The Ranch</a></li>
+          <li><a href="details.html#overview">Amenities</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-    </nav>
-    
-    <div class="page-header">
-        <h1>Contact Us</h1>
-        <p>Let's plan your perfect event</p>
+      </nav>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
-    
+  </header>
+  <div class="nav-overlay"></div>
+
+  <section class="page-hero">
+    <p class="hero-eyebrow">Say Hello</p>
+    <h1>Let's Plan Your Perfect Event</h1>
+  </section>
+
+  <section class="section">
     <div class="container">
-        <div class="contact-intro">
-            <p>
-                We'd love to hear from you! Whether you're interested in booking our venue, 
-                have questions about our facilities, or would like to schedule a tour, 
-                please don't hesitate to reach out.
-            </p>
-        </div>
-        
-        <div class="contact-info">
-            <div class="contact-item">
-                <h3>Phone</h3>
-                <a href="tel:2142087062">(214) 208-7062</a>
-                <p>Call us during business hours for immediate assistance</p>
+      <div class="section-head reveal">
+        <p class="section-eyebrow">Contact</p>
+        <h2>We'd Love to Hear From You</h2>
+        <p>Whether you're ready to book, curious about the space, or would like to schedule a tour — reach out any way you like. We respond within 24 hours.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <div class="contact-row">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
             </div>
-            
-            <div class="contact-item">
-                <h3>Email</h3>
-                <a href="mailto:bgbnbllc@gmail.com">bgbnbllc@gmail.com</a>
-                <p>Send us your inquiry and we'll respond within 24 hours</p>
+            <div>
+              <h3>Phone</h3>
+              <a href="tel:2142087062">(214) 208-7062</a>
+              <p>Call during business hours for immediate assistance</p>
             </div>
-            
-            <div class="contact-item">
-                <h3>Hours</h3>
-                <p>Monday - Sunday: 9:00 AM - 6:00 PM</p>
-                <p>Tours available by appointment</p>
+          </div>
+          <div class="contact-row">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
             </div>
+            <div>
+              <h3>Email</h3>
+              <a href="mailto:bgbnbllc@gmail.com">bgbnbllc@gmail.com</a>
+              <p>Send an inquiry and we'll respond within 24 hours</p>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            </div>
+            <div>
+              <h3>Hours</h3>
+              <p style="font-size:1.05rem;color:var(--espresso)">Monday – Sunday · 9:00 AM – 6:00 PM</p>
+              <p>Tours available by appointment</p>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </div>
+            <div>
+              <h3>Location</h3>
+              <p style="font-size:1.05rem;color:var(--espresso)">Van Alstyne, Texas</p>
+              <p>A short drive from the DFW metroplex</p>
+            </div>
+          </div>
         </div>
-        
-        <div class="cta-box">
-            <h2>Ready to Book Your Event?</h2>
-            <p>
-                Contact us today to check availability and learn more about our packages. 
-                We look forward to making your special day unforgettable at Saffron Skies Ranch!
-            </p>
-        </div>
+
+        <form class="inquiry-form reveal" action="mailto:bgbnbllc@gmail.com" method="post" enctype="text/plain">
+          <div class="section-head" style="text-align:left;margin-bottom:1.6rem">
+            <h2 style="font-size:1.8rem">Send an Inquiry</h2>
+          </div>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="name">Your Name</label>
+              <input id="name" name="name" type="text" required placeholder="Jane Smith">
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="(214) 555-0100">
+            </div>
+            <div class="form-field full">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="you@example.com">
+            </div>
+            <div class="form-field">
+              <label for="event-type">Event Type</label>
+              <select id="event-type" name="event_type">
+                <option>Wedding</option>
+                <option>Birthday Party</option>
+                <option>Baby Shower</option>
+                <option>Family Reunion</option>
+                <option>Other Celebration</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="date">Preferred Date</label>
+              <input id="date" name="date" type="date">
+            </div>
+            <div class="form-field full">
+              <label for="message">Tell Us About Your Event</label>
+              <textarea id="message" name="message" placeholder="Guest count, timing, anything we should know…"></textarea>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit">Send Inquiry</button>
+          <p class="form-note">We reply within 24 hours during business hours.</p>
+        </form>
+      </div>
     </div>
-    
-    <footer>
-        <p>Saffron Skies Ranch - Van Alstyne, Texas</p>
-    </footer>
+  </section>
+
+  <section class="cta-band">
+    <h2>Ready to Book Your Event?</h2>
+    <p>Contact us today to check availability and learn more about our packages. We look forward to making your special day unforgettable at Saffron Skies Ranch.</p>
+    <a class="btn btn-primary" href="tel:2142087062">Call (214) 208-7062</a>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-name">Saffron Skies Ranch</div>
+          <p>A private event house venue in Van Alstyne, Texas — where every celebration finds its sky.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="details.html">The Ranch</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="tel:2142087062">(214) 208-7062</a></li>
+            <li><a href="mailto:bgbnbllc@gmail.com">bgbnbllc@gmail.com</a></li>
+            <li>Mon–Sun · 9 AM – 6 PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Saffron Skies Ranch · Van Alstyne, Texas</div>
+    </div>
+  </footer>
+
+  <div class="mobile-bar">
+    <a class="bar-call" href="tel:2142087062">Call Us</a>
+    <a class="bar-book" href="mailto:bgbnbllc@gmail.com">Email Us</a>
+  </div>
+  <button class="to-top" aria-label="Back to top">&#8593;</button>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
